@@ -1,4 +1,35 @@
 .coordinator {
+    form {
+        .input_container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
 
-    
+
+            h3 {
+                font-size: 0.8rem;
+                color: #355990;
+                width: 8rem;
+                // margin-top: 0.7rem;
+
+                span {
+                    color: red;
+                }
+            }
+
+            input {
+                padding: 0.4rem;
+                width: 25rem;
+                border: none;
+                border: 1px solid #ccc;
+                border-radius: 0.1rem;
+
+            }
+
+            ::placeholder {
+                color: #ccc;
+            }
+           
+        }
+    }
 }

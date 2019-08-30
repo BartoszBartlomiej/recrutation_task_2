@@ -9,11 +9,11 @@
             margin-bottom: 1rem;
 
 
-            p {
+            h3 {
                 font-size: 0.8rem;
                 color: #355990;
                 width: 8rem;
-                // margin-top: 0.7rem;
+                
 
                 span {
                     color: red;
@@ -59,36 +59,41 @@
 
         }
 
+        .input_container:nth-child(2) {
+            align-items: flex-start;
+
+            p {
+                 margin-top: 0.7rem;
+            }
+        }
+
         .input_container:nth-child(4) {
 
             span {
                 font-size: 0.9rem;
                 color: #808080;
                 margin: 0 1.4rem 0 0.4rem;
-
             }
 
             input {
                 width: auto;
 
             }
-
         }
 
 
         .input_container:nth-child(5) {
 
-                span {
-                    font-size: 0.9rem;
-                    color: #808080;
-                    margin: 0 1.4rem 0 0.4rem;
+            span {
+                font-size: 0.9rem;
+                color: #808080;
+                margin: 0 1.4rem 0 0.4rem;
+            }
 
-                }
+            input {
+                width: 4.5rem;
 
-                input {
-                    width: 4.5rem;
-
-                }
             }
         }
     }
+}

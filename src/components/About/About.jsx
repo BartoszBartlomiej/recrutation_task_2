@@ -40,11 +40,11 @@ class About extends Component {
                 <div className="under_line" />
                 <form>
                     <div className="input_container">
-                        <p>TITLE <span>*</span></p>
+                        <h3>TITLE <span>*</span></h3>
                         <input value={this.state.title} onChange={this.handleTitleChange} placeholder="Make it short and clear" />
                     </div>
                     <div className="input_container">
-                        <p>DESCRIPTION <span>*</span></p>
+                        <h3>DESCRIPTION <span>*</span></h3>
                         <div className="textarea_container">
                             <textarea value={this.state.description} onChange={this.handleDescriptionChange} maxLength='140' placeholder="Write about your event, be creative" />
                             <div className="counter_container">
@@ -54,17 +54,17 @@ class About extends Component {
                         </div>
                     </div>
                     <div className="input_container">
-                        <p>CATEGORY</p>
+                        <h3>CATEGORY</h3>
                     </div>
                     <div className="input_container">
-                        <p>PAYMENT</p>
+                        <h3>PAYMENT</h3>
                             <input type="radio" name="payment"></input>
                             <span>Free event</span>
                             <input type="radio" name="payment"></input>
                             <span>Paid event</span>
                         </div>
                     <div className="input_container">
-                        <p>REWARD</p>
+                        <h3>REWARD</h3>
                         <input value={this.state.reward} onChange={this.handleRewardChange} placeholder="Number" />
                         <span>reward points for attendance</span>
                     </div>
