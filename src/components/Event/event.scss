@@ -1,0 +1,24 @@
+.event {
+
+    .event__topColor {
+        background-color: #1E3B68;
+        height: 1rem;
+    }
+
+    .event__bottomColor {
+        background-color: #355990;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+
+        p {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 100;
+
+        }
+
+    }
+
+
+}

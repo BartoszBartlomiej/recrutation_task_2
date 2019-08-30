@@ -1,6 +1,8 @@
 //GENERAL
 
 @import "general/reset.scss";
+@import "general/base.scss";
+
 
 
 // FORM
@@ -9,5 +11,7 @@
 @import "components/About/about.scss";
 @import "components/Coordinator/coordinator.scss";
 @import "components/When/when.scss";
+@import "components/Success/success.scss";
+
 
 

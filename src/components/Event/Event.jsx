@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 
+import About from "../About/About";
+
 class Event extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
-    }
+
     render() { 
         return (
-            <div>
-                
+            <div className="event">
+                <header>
+                    <div className="event__topColor"></div>
+                    <div className="event__bottomColor">
+                        <p className="container">New event</p>
+                    </div>
+                </header>
+                <div className="content">
+                    <About/>
+                </div>
             </div>
          );
     }
