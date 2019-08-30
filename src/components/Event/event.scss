@@ -1,19 +1,22 @@
 .event {
+    background-color: #f7f7f7f7;
+    height: 40rem;
 
     .event__topColor {
-        background-color: #1E3B68;
+        background-color: #1e3b68;
         height: 1rem;
     }
 
     .event__bottomColor {
+        padding-left: 2rem;
         background-color: #355990;
-        height: 4rem;
+        height: 5rem;
         display: flex;
         align-items: center;
 
-        p {
-            color: #ffffff;
-            font-size: 1.5rem;
+        h1 {
+            color: #fff;
+            font-size: 2rem;
             font-weight: 100;
 
         }
