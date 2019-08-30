@@ -1,64 +1,94 @@
 .about {
-    
-        height: 30rem;
 
-        form {
-            .input_container {
+    height: 30rem;
+
+    form {
+        .input_container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+
+
+            p {
+                font-size: 0.8rem;
+                color: #355990;
+                width: 8rem;
+                // margin-top: 0.7rem;
+
+                span {
+                    color: red;
+                }
+            }
+
+            input {
+                padding: 0.4rem;
+                width: 25rem;
+                border: none;
+                border: 1px solid #ccc;
+                border-radius: 0.1rem;
+
+            }
+
+            textarea {
+                padding: 0.3rem;
+                width: 25rem;
+                height: 10rem;
+                resize: none;
+                border: none;
+                border: 1px solid #ccc;
+                border-radius: 0.1rem;
+            }
+
+            ::placeholder {
+                color: #ccc;
+            }
+
+            .counter_container {
                 display: flex;
-                margin-bottom: 1rem;
-
+                width: 25rem;
+                justify-content: space-between;
 
                 p {
-                    font-size: 0.8rem;
-                    color: #355990;
-                    width: 10rem;
+                    width: auto;
+                    font-size: 0.7rem;
+                    color: #ccc;
+                    font-style: italic;
+                }
 
-                    span {
-                        color: red;
-                    }
+            }
+
+        }
+
+        .input_container:nth-child(4) {
+
+            span {
+                font-size: 0.9rem;
+                color: #808080;
+                margin: 0 1.4rem 0 0.4rem;
+
+            }
+
+            input {
+                width: auto;
+
+            }
+
+        }
+
+
+        .input_container:nth-child(5) {
+
+                span {
+                    font-size: 0.9rem;
+                    color: #808080;
+                    margin: 0 1.4rem 0 0.4rem;
+
                 }
 
                 input {
-                    padding: 0.4rem;
-                    width: 25rem;
-                    border: none;
-                    border: 1px solid #ccc;
-                    border-radius: 0.1rem;
-                    
+                    width: 4.5rem;
+
                 }
-
-                textarea {
-                    padding: 0.3rem;
-                    width: 25rem;
-                    height: 10rem;
-                    resize: none;
-                    border: none;
-                    border: 1px solid #ccc;
-                    border-radius: 0.1rem;
-                }
-
-                ::placeholder {
-                    color: #ccc;
-                  }
-                
-                  .counter_container {
-                      display: flex;
-                      width: 25rem;
-                      justify-content: space-between;
-
-                      p {
-                          width: auto;
-                          font-size: 0.7rem;
-                          color: #ccc;
-                          font-style: italic;
-                      }
-                    
-                  }
             }
-
-            
         }
-    
-
-
-}
+    }

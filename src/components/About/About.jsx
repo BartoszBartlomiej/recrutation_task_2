@@ -6,6 +6,7 @@ class About extends Component {
         this.state = {
             title: '',
             description: '',
+            reward: '',
 
         }
     }
@@ -19,6 +20,12 @@ class About extends Component {
     handleDescriptionChange = (e) => {
         this.setState({
             description: e.target.value
+        })
+    }
+
+    handleRewardChange = (e) => {
+        this.setState({
+            reward: e.target.value
         })
     }
 
@@ -51,7 +58,15 @@ class About extends Component {
                     </div>
                     <div className="input_container">
                         <p>PAYMENT</p>
-                        <input type="checkbox"></input>
+                            <input type="radio" name="payment"></input>
+                            <span>Free event</span>
+                            <input type="radio" name="payment"></input>
+                            <span>Paid event</span>
+                        </div>
+                    <div className="input_container">
+                        <p>REWARD</p>
+                        <input value={this.state.reward} onChange={this.handleRewardChange} placeholder="Number" />
+                        <span>reward points for attendance</span>
                     </div>
                 </form>
 
