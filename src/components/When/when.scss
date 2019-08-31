@@ -20,7 +20,6 @@
             input[type=date] {
                 padding: 0.22rem;
                 width: 10rem;
-                border: none;
                 border: 1px solid #ccc;
                 border-radius: 0.1rem;
                 margin-right: 0.5rem;
@@ -31,7 +30,6 @@
             input[type=time] {
                 padding: 0.22rem;
                 width: 5rem;
-                border: none;
                 border: 1px solid #ccc;
                 border-radius: 0.1rem;
                 // margin-left: 0.5rem;
@@ -57,9 +55,9 @@
             input {
                 padding: 0.3rem;
                 width: 4.5rem;
-                border: none;
                 border: 1px solid #ccc;
                 border-radius: 0.1rem;
+                color: #355990;
             }
 
             ::placeholder {
@@ -70,6 +68,11 @@
                 font-size: 0.9rem;
                 color: #808080;
                 margin: 0 1rem 0 0.5rem;
+            }
+
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
             }
         }
     }

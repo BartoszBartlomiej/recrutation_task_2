@@ -9,6 +9,8 @@ class About extends Component {
             reward: '',
             categories: [],
             selectStyle: 'bruce-wayne',
+            dupa: '',
+            
         };
     };
 
@@ -23,7 +25,7 @@ class About extends Component {
 
 
     componentDidMount() {
-        fetch('./categories.json').then(res => res.json()).then((data) => {
+        fetch('./mocks/categories.json').then(res => res.json()).then((data) => {
             this.setState({
                 categories: data,
             })
@@ -49,6 +51,14 @@ class About extends Component {
             reward: e.target.value,
         });
     };
+
+    handleChecked = (e) => {
+        this.setState({
+            
+        })
+
+
+    }
 
 
 
@@ -89,12 +99,16 @@ class About extends Component {
                         <h3>PAYMENT</h3>
                         <input type="radio" name="payment"></input>
                         <span>Free event</span>
-                        <input type="radio" name="payment"></input>
+                        <input type="radio" name="payment" ></input>
                         <span>Paid event</span>
+                        <div className="fee">
+                            <input type="number" placeholder="Fee"></input>
+                            <span>$</span>
+                        </div>
                     </div>
                     <div className="input_container">
                         <h3>REWARD</h3>
-                        <input value={this.state.reward} onChange={this.handleRewardChange} placeholder="Number" />
+                        <input type="number" value={this.state.reward} onChange={this.handleRewardChange} placeholder="Number" />
                         <span>reward points for attendance</span>
                     </div>
                 </form>

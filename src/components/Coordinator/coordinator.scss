@@ -19,7 +19,6 @@
             input {
                 padding: 0.4rem;
                 width: 25rem;
-                border: none;
                 border: 1px solid #ccc;
                 border-radius: 0.1rem;
                 color: #355990;
@@ -28,7 +27,21 @@
             ::placeholder {
                 color: #ccc;
             }
-           
+
+            select {
+
+                padding: 0.4rem;
+                width: 25rem;
+                border: 1px solid #ccc;
+                border-radius: 0.1rem;
+                background-color: #fff;
+                color: #355990;
+
+
+                option {
+                    color: #355990;
+                }
+            }
         }
     }
 }

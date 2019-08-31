@@ -52,7 +52,7 @@ class When extends Component {
                     </div>
                     <div className="input_container">
                         <h3>DURATION</h3>
-                        <input value={this.state.duration} onChange={this.handleDurationChange} placeholder="Number" />
+                        <input type="number" value={this.state.duration} onChange={this.handleDurationChange} placeholder="Number" />
                         <p>hour</p>
                     </div>
                 </form>

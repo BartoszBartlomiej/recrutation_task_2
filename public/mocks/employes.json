@@ -17,8 +17,8 @@
   },
   {
     "id": 3,
-    "name": "Walter",
-    "lastname": "Nelson"
+    "name": "Bartosz",
+    "lastname": "Lewicki"
   },
   {
     "id": 4,
@@ -49,5 +49,10 @@
     "id": 9,
     "name": "Janet",
     "lastname": "Stewart"
+  },
+  {
+    "id": 10,
+    "name": "Walter",
+    "lastname": "Nelson"
   }
 ]
