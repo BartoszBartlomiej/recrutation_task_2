@@ -3,10 +3,16 @@ import React, { Component } from 'react';
 import About from "../About/About";
 import Coordinator from "../Coordinator/Coordinator";
 import When from "../When/When";
+import Success from "../Success/Success";
+
 
 
 
 class Event extends Component {
+
+
+
+
 
     render() { 
         return (
@@ -18,9 +24,12 @@ class Event extends Component {
                     </div>
                 </header>
                 <div className="content">
+          
                     <About />
                     <Coordinator />
-                    <When />                
+                    <When />          
+                    <Success />      
+        
                 </div>
             </div>
          );

@@ -1,0 +1,20 @@
+.success {
+    background-color: #edfff3;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+
+    h3 {
+        color: #67d582;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+        color: #808080;
+    }
+
+}

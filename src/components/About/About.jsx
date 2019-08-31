@@ -8,7 +8,9 @@ class About extends Component {
             description: '',
             reward: '',
 
+            
         }
+        
     }
 
     handleTitleChange = (e) => {
@@ -32,7 +34,6 @@ class About extends Component {
 
 
 
-
     render() {
         return (
             <div className="about box">
@@ -41,12 +42,12 @@ class About extends Component {
                 <form>
                     <div className="input_container">
                         <h3>TITLE <span>*</span></h3>
-                        <input value={this.state.title} onChange={this.handleTitleChange} placeholder="Make it short and clear" />
+                        <input value={this.state.title} onChange={this.handleTitleChange} placeholder="Make it short and clear" required />
                     </div>
                     <div className="input_container">
                         <h3>DESCRIPTION <span>*</span></h3>
                         <div className="textarea_container">
-                            <textarea value={this.state.description} onChange={this.handleDescriptionChange} maxLength='140' placeholder="Write about your event, be creative" />
+                            <textarea value={this.state.description} onChange={this.handleDescriptionChange} maxLength='140' placeholder="Write about your event, be creative" required/>
                             <div className="counter_container">
                                 <p>Max lenght 140 characters</p>
                                 <p>0/140</p>
@@ -69,10 +70,6 @@ class About extends Component {
                         <span>reward points for attendance</span>
                     </div>
                 </form>
-
-
-
-
             </div>
         );
     }

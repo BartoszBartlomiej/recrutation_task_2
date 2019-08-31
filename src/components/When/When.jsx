@@ -5,6 +5,8 @@ class When extends Component {
         super(props);
         this.state = {
             date: '',
+            time: '',
+            duration: '',
         }
     }
 
@@ -26,6 +28,7 @@ class When extends Component {
             duration: e.target.value,
         })
     }
+
 
 
 
@@ -53,6 +56,7 @@ class When extends Component {
                         <p>hour</p>
                     </div>
                 </form>
+         
             </div>
         );
     }
