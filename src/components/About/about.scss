@@ -13,7 +13,7 @@
                 font-size: 0.8rem;
                 color: #355990;
                 width: 8rem;
-                
+
 
                 span {
                     color: red;
@@ -26,6 +26,7 @@
                 border: none;
                 border: 1px solid #ccc;
                 border-radius: 0.1rem;
+                color: #355990;
 
             }
 
@@ -37,6 +38,7 @@
                 border: none;
                 border: 1px solid #ccc;
                 border-radius: 0.1rem;
+                color: #355990;
             }
 
             ::placeholder {
@@ -47,6 +49,7 @@
                 display: flex;
                 width: 25rem;
                 justify-content: space-between;
+                margin-top: -0.8rem;
 
                 p {
                     width: auto;
@@ -57,13 +60,37 @@
 
             }
 
+            .bruce-wayne {
+                color: #ccc;
+            }
+
+            .batman {
+                color: #355990;
+            }
+
+            select {
+                
+                    padding: 0.4rem;
+                    width: 25rem;
+                    border: none;
+                    border: 1px solid #ccc;
+                    border-radius: 0.1rem;
+                    background-color: #fff;
+                    color: #355990;
+                    
+
+                    option {
+                        color: #355990;
+                    }
+            }
+
         }
 
         .input_container:nth-child(2) {
             align-items: flex-start;
 
             p {
-                 margin-top: 0.7rem;
+                margin-top: 0.7rem;
             }
         }
 

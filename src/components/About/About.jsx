@@ -7,11 +7,30 @@ class About extends Component {
             title: '',
             description: '',
             reward: '',
+            categories: [],
+            selectStyle: 'bruce-wayne',
+        };
+    };
 
-            
-        }
-        
-    }
+
+
+    handleClick = (e) => {
+        e.preventDefault();
+        this.setState({
+            selectStyle: 'batman',
+        });
+    };
+
+
+    componentDidMount() {
+        fetch('./categories.json').then(res => res.json()).then((data) => {
+            this.setState({
+                categories: data,
+            })
+            //    console.log(data)
+        });
+    };
+
 
     handleTitleChange = (e) => {
         this.setState({
@@ -21,20 +40,25 @@ class About extends Component {
 
     handleDescriptionChange = (e) => {
         this.setState({
-            description: e.target.value
-        })
-    }
+            description: e.target.value,
+        });
+    };
 
     handleRewardChange = (e) => {
         this.setState({
-            reward: e.target.value
-        })
-    }
+            reward: e.target.value,
+        });
+    };
 
 
 
 
     render() {
+
+        const categoryList = this.state.categories.map(elem =>
+            <option key={elem.id} value={elem.name.toLowerCase()}>{elem.name}</option>);
+
+
         return (
             <div className="about box">
                 <h2>About</h2>
@@ -47,23 +71,27 @@ class About extends Component {
                     <div className="input_container">
                         <h3>DESCRIPTION <span>*</span></h3>
                         <div className="textarea_container">
-                            <textarea value={this.state.description} onChange={this.handleDescriptionChange} maxLength='140' placeholder="Write about your event, be creative" required/>
+                            <textarea value={this.state.description} onChange={this.handleDescriptionChange} maxLength='140' placeholder="Write about your event, be creative" required />
                             <div className="counter_container">
-                                <p>Max lenght 140 characters</p>
-                                <p>0/140</p>
+                                <p>Max length 140 characters</p>
+                                <p>{this.state.description.length}/140</p>
                             </div>
                         </div>
                     </div>
                     <div className="input_container">
                         <h3>CATEGORY</h3>
+                        <select className={this.state.selectStyle} onClick={this.handleClick}>
+                            <option defaultValue hidden>Select category (skills, interests, locations)</option>
+                            {categoryList}
+                        </select>
                     </div>
                     <div className="input_container">
                         <h3>PAYMENT</h3>
-                            <input type="radio" name="payment"></input>
-                            <span>Free event</span>
-                            <input type="radio" name="payment"></input>
-                            <span>Paid event</span>
-                        </div>
+                        <input type="radio" name="payment"></input>
+                        <span>Free event</span>
+                        <input type="radio" name="payment"></input>
+                        <span>Paid event</span>
+                    </div>
                     <div className="input_container">
                         <h3>REWARD</h3>
                         <input value={this.state.reward} onChange={this.handleRewardChange} placeholder="Number" />
@@ -72,7 +100,7 @@ class About extends Component {
                 </form>
             </div>
         );
-    }
-}
+    };
+};
 
 export default About;

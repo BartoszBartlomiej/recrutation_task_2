@@ -6,11 +6,11 @@ class Coordinator extends Component {
         this.state = {
             email: '',
            
-        }
-    }
+        };
+    };
 
     handleEmailChange = (e) => {
-        this.setState = ({
+        this.setState({ 
             email: e.target.value,
         })
     }
@@ -35,7 +35,7 @@ class Coordinator extends Component {
                 </form>
             </div>
         );
-    }
-}
+    };
+};
 
 export default Coordinator;
