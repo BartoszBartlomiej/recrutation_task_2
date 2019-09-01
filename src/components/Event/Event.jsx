@@ -1,28 +1,19 @@
 import React, { Component } from 'react';
 
-import About from "./About/About";
-import Coordinator from "./Coordinator/Coordinator";
-import When from "./When/When";
-import Success from "./Success/Success";
-
-
-
+import About from "./About";
+import Coordinator from "./Coordinator";
+import When from "./When";
+import Success from "./Success";
 
 class Event extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            gowno: 'block'
-
 
         };
     };
 
-
     render() {
-
-
-
         return (
             <div className="event">
                 <header>
@@ -44,7 +35,7 @@ class Event extends Component {
                 </div>
             </div>
         );
-    }
-}
+    };
+};
 
 export default Event;

@@ -1,45 +1,18 @@
 @import '../../../general/variables.scss';
 
-
 .coordinator {
+
     form {
+
         .input_container {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-
-
-            h3 {
-                font-size: 0.8rem;
-                color: $base-blue;
-                width: 8rem;
-
-                span {
-                    color: red;
-                }
-            }
-
-            input {
-                padding: 0.4rem;
-                width: 25rem;
-                border: 1px solid $base-grey;
-                border-radius: 0.1rem;
-                color: $base-blue;
-            }
-
-            ::placeholder {
-                color: $base-grey;
-            }
 
             select {
-
                 padding: 0.4rem;
                 width: 25rem;
                 border: 1px solid $base-grey;
                 border-radius: 0.1rem;
                 background-color: #fff;
                 color: $base-blue;
-
 
                 option {
                     color: $base-blue;

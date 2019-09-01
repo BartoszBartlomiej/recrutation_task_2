@@ -1,36 +1,10 @@
 @import '../../../general/variables.scss';
 
-
 .about {
 
-    height: 30rem;
-
     form {
+
         .input_container {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-
-
-            h3 {
-                font-size: 0.8rem;
-                color: $base-blue;
-                width: 8rem;
-
-
-                span {
-                    color: red;
-                }
-            }
-
-            input {
-                padding: 0.4rem;
-                width: 25rem;
-                border: 1px solid $base-grey;
-                border-radius: 0.1rem;
-                color: $base-blue;
-
-            }
 
             textarea {
                 padding: 0.3rem;
@@ -40,10 +14,6 @@
                 border: 1px solid $base-grey;
                 border-radius: 0.1rem;
                 color: $base-blue;
-            }
-
-            ::placeholder {
-                color: $base-grey;
             }
 
             .counter_container {
@@ -58,7 +28,6 @@
                     color: $base-grey;
                     font-style: italic;
                 }
-
             }
 
             .bruce-wayne {
@@ -78,7 +47,6 @@
                 background-color: #fff;
                 color: $base-blue;
 
-
                 option {
                     color: $base-blue;
                 }
@@ -86,19 +54,11 @@
 
             .fee_invisible {
                 display: none;
-
             }
 
             .fee_visible {
                 display: block;
             }
-
-
-            input[type=number]::-webkit-inner-spin-button,
-            input[type=number]::-webkit-outer-spin-button {
-                -webkit-appearance: none;
-            }
-
         }
 
         .input_container:nth-child(2) {
@@ -110,6 +70,7 @@
         }
 
         .input_container:nth-child(4) {
+            height: 2rem;
 
             span {
                 font-size: 0.9rem;
@@ -126,7 +87,6 @@
             }
         }
 
-
         .input_container:nth-child(5) {
 
             span {
@@ -136,10 +96,8 @@
             }
 
             input {
-                width: 4.5rem;
-
+                width: 5rem;
             }
-
         }
     }
 }

@@ -1,6 +1,5 @@
 @import '../../general/variables.scss';
 
-
 .event {
     background-color: #f7f7f7f7;
     height: 90rem;
@@ -21,29 +20,21 @@
             color: #fff;
             font-size: 2rem;
             font-weight: 100;
-
         }
-
     }
 
     .button_container {
         margin-top: 2rem;
         display: flex;
         justify-content: center;
-        
+
         button {
             border: 1px solid $button-color;
             border-radius: 0.1rem;
             background-color: $button-color;
             color: #fff;
-
             height: 2.5rem;
             width: 8rem;
-    
         }
     }
-
-
-
-
 }

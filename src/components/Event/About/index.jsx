@@ -10,11 +10,8 @@ class About extends Component {
             categories: [],
             selectStyle: 'bruce-wayne',
             fee: false,
-            
         };
     };
-
-
 
     handleClick = (e) => {
         e.preventDefault();
@@ -23,17 +20,13 @@ class About extends Component {
         });
     };
 
-
     componentDidMount() {
         fetch('./mocks/categories.json').then(res => res.json()).then((data) => {
             this.setState({
                 categories: data,
             })
-            //    console.log(data)
         });
     };
-
-  
 
     handleTitleChange = (e) => {
         this.setState({
@@ -55,20 +48,14 @@ class About extends Component {
 
     handleChecked = (e) => {
         this.setState({
-            fee: !this.state.fee 
-            
-        })
-    }
+            fee: !this.state.fee
+        });
+    };
 
     render() {
 
-
         const categoryList = this.state.categories.map(elem =>
             <option key={elem.id} value={elem.name.toLowerCase()}>{elem.name}</option>);
-
-     
-            console.log('ni chuj nie wiem')
-
 
         return (
             <div className="about box">
@@ -77,12 +64,12 @@ class About extends Component {
                 <form>
                     <div className="input_container">
                         <h3>TITLE <span>*</span></h3>
-                        <input value={this.state.title} onChange={this.handleTitleChange} placeholder="Make it short and clear" required />
+                        <input type="text" name="title" value={this.state.title} onChange={this.handleTitleChange} placeholder="Make it short and clear" required />
                     </div>
                     <div className="input_container">
                         <h3>DESCRIPTION <span>*</span></h3>
                         <div className="textarea_container">
-                            <textarea value={this.state.description} onChange={this.handleDescriptionChange} maxLength='140' placeholder="Write about your event, be creative" required />
+                            <textarea type="text" name="description" value={this.state.description} onChange={this.handleDescriptionChange} maxLength='140' placeholder="Write about your event, be creative" required />
                             <div className="counter_container">
                                 <p>Max length 140 characters</p>
                                 <p>{this.state.description.length}/140</p>
@@ -91,7 +78,7 @@ class About extends Component {
                     </div>
                     <div className="input_container">
                         <h3>CATEGORY</h3>
-                        <select className={this.state.selectStyle} onClick={this.handleClick}>
+                        <select name="category" className={this.state.selectStyle} onClick={this.handleClick}>
                             <option defaultValue hidden>Select category (skills, interests, locations)</option>
                             {categoryList}
                         </select>
@@ -109,7 +96,7 @@ class About extends Component {
                     </div>
                     <div className="input_container">
                         <h3>REWARD</h3>
-                        <input type="number" value={this.state.reward} onChange={this.handleRewardChange} placeholder="Number" />
+                        <input type="number" name="reward" value={this.state.reward} onChange={this.handleRewardChange} placeholder="Number" />
                         <span>reward points for attendance</span>
                     </div>
                 </form>

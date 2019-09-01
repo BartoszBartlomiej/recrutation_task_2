@@ -5,32 +5,18 @@
     form {
 
         .input_container {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-
-            h3 {
-                font-size: 0.8rem;
-                color: $base-blue;
-                width: 8rem;
-
-                span {
-                    color: red;
-                }
-            }
 
             input[type=date] {
-                padding: 0.22rem;
+                padding: 0.3rem;
                 width: 10rem;
                 border: 1px solid $base-grey;
                 border-radius: 0.1rem;
                 margin-right: 0.5rem;
                 color: $base-grey;
-
             }
 
             input[type=time] {
-                padding: 0.22rem;
+                padding: 0.3rem;
                 width: 5rem;
                 border: 1px solid $base-grey;
                 border-radius: 0.1rem;
@@ -50,31 +36,16 @@
                 p {
                     margin: 0 .1rem 0 0.2rem;
                 }
-
             }
-
 
             input {
-                padding: 0.3rem;
-                width: 4.5rem;
-                border: 1px solid $base-grey;
-                border-radius: 0.1rem;
-                color: $base-blue;
-            }
-
-            ::placeholder {
-                color: $base-grey;
+                width: 5rem;
             }
 
             p {
                 font-size: 0.9rem;
                 color: $dark-grey;
                 margin: 0 1rem 0 0.5rem;
-            }
-
-            input[type=number]::-webkit-inner-spin-button,
-            input[type=number]::-webkit-outer-spin-button {
-                -webkit-appearance: none;
             }
         }
     }
