@@ -1,8 +1,8 @@
 ## To run project:
 1. Clone or download repository
 2. Open terminal in the project directory
-3. Type:
-  3.1. `npm install`
+3. Type:<br>
+  3.1. `npm install`<br>
   3.1. `npm start`
 4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
