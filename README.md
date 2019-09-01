@@ -8,7 +8,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-    <!--
+
                               _   ,
      (HAVE A NICE DAY) -====;o`\/ }
                                \-'\-'----.
@@ -16,4 +16,3 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
                                 /\/\
                                 `--`
                                        B.B.L
-    -->
