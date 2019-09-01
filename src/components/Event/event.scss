@@ -1,3 +1,6 @@
+@import '../../general/variables.scss';
+
+
 .event {
     background-color: #f7f7f7f7;
     height: 90rem;
@@ -9,7 +12,7 @@
 
     .event__bottomColor {
         padding-left: 2rem;
-        background-color: #355990;
+        background-color: $base-blue;
         height: 5rem;
         display: flex;
         align-items: center;
@@ -22,6 +25,25 @@
         }
 
     }
+
+    .button_container {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        
+        button {
+            border: 1px solid $button-color;
+            border-radius: 0.1rem;
+            background-color: $button-color;
+            color: #fff;
+
+            height: 2.5rem;
+            width: 8rem;
+    
+        }
+    }
+
+
 
 
 }

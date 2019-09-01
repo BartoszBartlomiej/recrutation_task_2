@@ -1,3 +1,6 @@
+@import '../../../general/variables.scss';
+
+
 .about {
 
     height: 30rem;
@@ -11,7 +14,7 @@
 
             h3 {
                 font-size: 0.8rem;
-                color: #355990;
+                color: $base-blue;
                 width: 8rem;
 
 
@@ -23,9 +26,9 @@
             input {
                 padding: 0.4rem;
                 width: 25rem;
-                border: 1px solid #ccc;
+                border: 1px solid $base-grey;
                 border-radius: 0.1rem;
-                color: #355990;
+                color: $base-blue;
 
             }
 
@@ -34,13 +37,13 @@
                 width: 25rem;
                 height: 10rem;
                 resize: none;
-                border: 1px solid #ccc;
+                border: 1px solid $base-grey;
                 border-radius: 0.1rem;
-                color: #355990;
+                color: $base-blue;
             }
 
             ::placeholder {
-                color: #ccc;
+                color: $base-grey;
             }
 
             .counter_container {
@@ -52,34 +55,44 @@
                 p {
                     width: auto;
                     font-size: 0.7rem;
-                    color: #ccc;
+                    color: $base-grey;
                     font-style: italic;
                 }
 
             }
 
             .bruce-wayne {
-                color: #ccc;
+                color: $base-grey;
             }
 
             .batman {
-                color: #355990;
+                color: $base-blue;
             }
 
             select {
 
                 padding: 0.4rem;
                 width: 25rem;
-                border: 1px solid #ccc;
+                border: 1px solid $base-grey;
                 border-radius: 0.1rem;
                 background-color: #fff;
-                color: #355990;
+                color: $base-blue;
 
 
                 option {
-                    color: #355990;
+                    color: $base-blue;
                 }
             }
+
+            .fee_invisible {
+                display: none;
+
+            }
+
+            .fee_visible {
+                display: block;
+            }
+
 
             input[type=number]::-webkit-inner-spin-button,
             input[type=number]::-webkit-outer-spin-button {
@@ -100,7 +113,7 @@
 
             span {
                 font-size: 0.9rem;
-                color: #808080;
+                color: $dark-grey;
                 margin: 0 1.4rem 0 0.4rem;
             }
 
@@ -118,7 +131,7 @@
 
             span {
                 font-size: 0.9rem;
-                color: #808080;
+                color: $dark-grey;
                 margin: 0 1.4rem 0 0.4rem;
             }
 

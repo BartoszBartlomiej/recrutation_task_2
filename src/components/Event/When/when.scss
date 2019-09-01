@@ -1,3 +1,5 @@
+@import '../../../general/variables.scss';
+
 .when {
 
     form {
@@ -9,7 +11,7 @@
 
             h3 {
                 font-size: 0.8rem;
-                color: #355990;
+                color: $base-blue;
                 width: 8rem;
 
                 span {
@@ -20,20 +22,20 @@
             input[type=date] {
                 padding: 0.22rem;
                 width: 10rem;
-                border: 1px solid #ccc;
+                border: 1px solid $base-grey;
                 border-radius: 0.1rem;
                 margin-right: 0.5rem;
-                color: #ccc;
+                color: $base-grey;
 
             }
 
             input[type=time] {
                 padding: 0.22rem;
                 width: 5rem;
-                border: 1px solid #ccc;
+                border: 1px solid $base-grey;
                 border-radius: 0.1rem;
                 // margin-left: 0.5rem;
-                color: #ccc;
+                color: $base-grey;
             }
 
             .radio_container {
@@ -55,18 +57,18 @@
             input {
                 padding: 0.3rem;
                 width: 4.5rem;
-                border: 1px solid #ccc;
+                border: 1px solid $base-grey;
                 border-radius: 0.1rem;
-                color: #355990;
+                color: $base-blue;
             }
 
             ::placeholder {
-                color: #ccc;
+                color: $base-grey;
             }
 
             p {
                 font-size: 0.9rem;
-                color: #808080;
+                color: $dark-grey;
                 margin: 0 1rem 0 0.5rem;
             }
 

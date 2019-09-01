@@ -12,6 +12,9 @@ class When extends Component {
 
 
     handleDateChange = (e) => {
+
+        
+
         this.setState({
             date: e.target.value,
         })
@@ -33,6 +36,10 @@ class When extends Component {
 
 
     render() {
+
+        console.log(new Date())
+
+
         return (
             <div className="when box">
                 <h2>When</h2>
@@ -40,11 +47,11 @@ class When extends Component {
                 <form>
                     <div className="input_container">
                         <h3>STARTS ON <span>*</span></h3>
-                        <input type="date" value={this.state.date} onChange={this.handleDateChange} placeholder="dd/mm/yyyy" />
+                        <input type="date" min={new Date()} value={this.state.date} onChange={this.handleDateChange} />
                         <p>at</p>
-                        <input type="time" value={this.state.time} onChange={this.handleTimeChange} placeholder="--:--" />
+                        <input type="time" value={this.state.time} onChange={this.handleTimeChange} />
                         <div className="radio_container">
-                            <input type="radio" name='AM/PM' />
+                            <input type="radio" name='AM/PM' defaultChecked/>
                             <p>AM</p>
                             <input type="radio" name='AM/PM' />
                             <p>PM</p>

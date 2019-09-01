@@ -9,7 +9,7 @@ class About extends Component {
             reward: '',
             categories: [],
             selectStyle: 'bruce-wayne',
-            dupa: '',
+            fee: false,
             
         };
     };
@@ -33,6 +33,7 @@ class About extends Component {
         });
     };
 
+  
 
     handleTitleChange = (e) => {
         this.setState({
@@ -54,19 +55,21 @@ class About extends Component {
 
     handleChecked = (e) => {
         this.setState({
+            fee: !this.state.fee 
             
         })
-
-
     }
-
 
 
 
     render() {
 
+
         const categoryList = this.state.categories.map(elem =>
             <option key={elem.id} value={elem.name.toLowerCase()}>{elem.name}</option>);
+
+     
+            console.log('ni chuj nie wiem')
 
 
         return (
@@ -97,11 +100,11 @@ class About extends Component {
                     </div>
                     <div className="input_container">
                         <h3>PAYMENT</h3>
-                        <input type="radio" name="payment"></input>
+                        <input type="radio" name="payment" defaultChecked onClick={this.handleChecked}></input>
                         <span>Free event</span>
-                        <input type="radio" name="payment" ></input>
+                        <input type="radio" name="payment" onClick={this.handleChecked}></input>
                         <span>Paid event</span>
-                        <div className="fee">
+                        <div className={this.state.fee ? "fee_visible" : "fee_invisible"}>
                             <input type="number" placeholder="Fee"></input>
                             <span>$</span>
                         </div>
