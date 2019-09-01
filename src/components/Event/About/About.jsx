@@ -60,8 +60,6 @@ class About extends Component {
         })
     }
 
-
-
     render() {
 
 
