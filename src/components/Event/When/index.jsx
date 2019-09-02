@@ -5,7 +5,6 @@ class When extends Component {
         super(props);
         this.state = {
             date: '',
-            time: '',
             duration: '',
         };
     };
@@ -16,11 +15,11 @@ class When extends Component {
         });
     };
 
-    handleTimeChange = (e) => {
-        this.setState({
-            time: e.target.value,
-        });
-    };
+    // handleTimeChange = (e) => {
+    //     this.setState({
+    //         time: e.target.value,
+    //     });
+    // };
 
     handleDurationChange = (e) => {
         this.setState({
@@ -39,7 +38,7 @@ class When extends Component {
                         <h3>STARTS ON <span>*</span></h3>
                         <input type="date" name="date" min={new Date()} value={this.state.date} onChange={this.handleDateChange} required />
                         <p>at</p>
-                        <input type="time" name="time" value={this.state.time} onChange={this.handleTimeChange} required />
+                        <input type="time" name="time" value={this.state.date} onChange={this.handleDateChange} required />
                         <div className="radio_container">
                             <input type="radio" name='AM/PM' defaultChecked />
                             <p>AM</p>

@@ -7,18 +7,18 @@ class Coordinator extends Component {
             email: '',
             employes: [],
             defaultUser: '',
-            // loggedUser: {
-            //     id: 3,
-            // }
+            loggedUser: {
+                id: 3,
+            },
+
         };
     };
 
     componentDidMount() {
         fetch('./mocks/employes.json').then(res => res.json()).then((data) => {
             this.setState({
-                employes: data,
+                employes: data.filter(emp => {return emp.id !== 3 }),
                 defaultUser: data[3].name + ' ' + data[3].lastname,
-                // Zwrócić wszystkie których ID jest różne od 3 
             });
         });
     };
@@ -32,7 +32,7 @@ class Coordinator extends Component {
     render() {
 
         const employesList = this.state.employes.map(elem =>
-            <option key={elem.id} value={elem.name.toLowerCase()}>{elem.name} {elem.lastname}</option>);
+            <option key={elem.id} value={elem.name}>{elem.name} {elem.lastname}</option>);
 
         return (
             <div className="coordinator box">
