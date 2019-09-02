@@ -38,7 +38,7 @@ class Coordinator extends Component {
             <div className="coordinator box">
                 <h2>Coordinator</h2>
                 <div className="under_line" />
-                <form>
+                <div className="form_container">
                     <div className="input_container">
                         <h3>RESPONSIBLE <span>*</span></h3>
                         <select name="responsible" required>
@@ -50,7 +50,7 @@ class Coordinator extends Component {
                         <h3>EMAIL</h3>
                         <input type="email" name="email" value={this.state.email} onChange={this.handleEmailChange} placeholder="Email" />
                     </div>
-                </form>
+                </div>
             </div>
         );
     };

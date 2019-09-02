@@ -47,10 +47,12 @@ class About extends Component {
     };
 
     handleChecked = (e) => {
+        console.log(e.target)
         this.setState({
             fee: !this.state.fee
         });
     };
+
 
     render() {
 
@@ -61,10 +63,10 @@ class About extends Component {
             <div className="about box">
                 <h2>About</h2>
                 <div className="under_line" />
-                <form>
+                <div className="form_container" >
                     <div className="input_container">
                         <h3>TITLE <span>*</span></h3>
-                        <input type="text" name="title" value={this.state.title} onChange={this.handleTitleChange} placeholder="Make it short and clear" required />
+                        <input type="text" name="title" value={this.props.title} onChange={this.handleTitleChange} placeholder="Make it short and clear" required />
                     </div>
                     <div className="input_container">
                         <h3>DESCRIPTION <span>*</span></h3>
@@ -72,7 +74,7 @@ class About extends Component {
                             <textarea type="text" name="description" value={this.state.description} onChange={this.handleDescriptionChange} maxLength='140' placeholder="Write about your event, be creative" required />
                             <div className="counter_container">
                                 <p>Max length 140 characters</p>
-                                <p>{this.state.description.length}/140</p>
+                                {/* <p>{this.state.description.length}/140</p> */}
                             </div>
                         </div>
                     </div>
@@ -85,9 +87,9 @@ class About extends Component {
                     </div>
                     <div className="input_container">
                         <h3>PAYMENT</h3>
-                        <input type="radio" name="payment" defaultChecked onClick={this.handleChecked}></input>
+                        <input type="radio" name="payment" id="free" defaultChecked onClick={this.handleChecked}></input>
                         <span>Free event</span>
-                        <input type="radio" name="payment" onClick={this.handleChecked}></input>
+                        <input type="radio" name="payment" id="paid" onClick={this.handleChecked}></input>
                         <span>Paid event</span>
                         <div className={this.state.fee ? "fee_visible" : "fee_invisible"}>
                             <input type="number" placeholder="Fee"></input>
@@ -99,7 +101,7 @@ class About extends Component {
                         <input type="number" name="reward" value={this.state.reward} onChange={this.handleRewardChange} placeholder="Number" />
                         <span>reward points for attendance</span>
                     </div>
-                </form>
+                </div>
             </div>
         );
     };
