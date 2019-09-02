@@ -2,7 +2,8 @@
 
 .event {
     background-color: #f7f7f7f7;
-    height: 90rem;
+    margin-bottom: 2rem;
+    // height: 90rem;
 
     .event__topColor {
         background-color: #1e3b68;
@@ -38,24 +39,12 @@
         }
     }
 
-    // .showForm {
-    //     display: block;
+    .visible {
+        display: block;
     
-        
-    // }
+    }
 
-    // .hideForm {
-    //     display: none;
-    // }
-
-
-    // .showSuccess {
-    //     display: block;
-    
-        
-    // }
-
-    // .hideSuccess {
-    //     display: none;
-    // }
+    .invisible {
+        display: none;
+    }
 }

@@ -9,9 +9,9 @@ class Event extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            hideForm: true,
-            showSuccess: false,
-            
+            formVisible: true,
+            successVisible: false,
+
 
 
         };
@@ -22,15 +22,15 @@ class Event extends Component {
         e.preventDefault()
         alert('jest');
         this.setState({
-            // display: !this.state.display,
-    
-            
+            formVisible: !this.state.formVisible,
+            successVisible: !this.state.successVisible
+
         })
     }
 
 
     render() {
-        
+
         return (
             <div className="event">
                 <header>
@@ -40,7 +40,7 @@ class Event extends Component {
                     </div>
                 </header>
                 <div className="content">
-                    <form onSubmit={this.handleSubmit} className={this.state.display ? "show" : 'hide'}> 
+                    <form onSubmit={this.handleSubmit} className={this.state.formVisible ? "visible" : 'invisible'}>
                         <About />
                         <Coordinator />
                         <When />
@@ -48,7 +48,9 @@ class Event extends Component {
                             <button type="submit" onClick={this.handleClick}>PUBLISH EVENT</button>
                         </div>
                     </form>
-                    <Success className={this.state.display ? "hide" : 'show'} />
+                    <div className={this.state.successVisible ? "visible" : 'invisible'}>
+                        <Success />
+                    </div>
                 </div>
             </div>
         );

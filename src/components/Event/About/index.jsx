@@ -74,7 +74,7 @@ class About extends Component {
                             <textarea type="text" name="description" value={this.state.description} onChange={this.handleDescriptionChange} maxLength='140' placeholder="Write about your event, be creative" required />
                             <div className="counter_container">
                                 <p>Max length 140 characters</p>
-                                {/* <p>{this.state.description.length}/140</p> */}
+                                <p>{this.state.description.length}/140</p>
                             </div>
                         </div>
                     </div>
